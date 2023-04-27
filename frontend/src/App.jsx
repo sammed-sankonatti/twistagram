@@ -6,6 +6,7 @@ import {themeSettings} from "../theme"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ThemeProvider, CssBaseline } from '@mui/material';
 import HomePage from './pages/HomePage';
+import TopBar from './widgets/TopBar';
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
     <Router>
       <ThemeProvider theme={theme}>
         <CssBaseline />
+          <TopBar />
           <Routes>
             <Route path="/" element={<HomePage />} />
           </Routes>
