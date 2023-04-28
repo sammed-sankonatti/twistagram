@@ -2,7 +2,7 @@ import { AppBar } from "@mui/material";
 import { styled } from "@mui/system";
 
 const StyledAppBar = styled(AppBar)(({theme})=> ({
-  position : "sticky",
+  position : "fixed",
   background : theme.palette.background.default
 }))
 

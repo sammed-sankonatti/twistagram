@@ -11,25 +11,26 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 const StyledIconButton = styled(IconButton)({
   paddingLeft : "0.8rem",
   paddingTop : "0.8rem",
-  borderRadius : "0px"
+  borderRadius : "0px",
+  fill : "black"
 })
 
 
 const footerOptions = [
   {
-    icon : <HomeIcon />
+    icon : (color) => <HomeIcon sx={{fill : color}}/>
   },
   {
-    icon : <SearchIcon />
+    icon : (color) => <SearchIcon sx={{fill : color}} />
   },
   {
-    icon : <OndemandVideoIcon />
+    icon : (color) => <OndemandVideoIcon sx={{fill : color}} />
   },
   {
-    icon : <FavoriteBorderIcon />
+    icon : (color) => <FavoriteBorderIcon sx={{fill : color}} />
   },
   {
-    icon : <AccountCircleIcon />
+    icon : (color) => <AccountCircleIcon sx={{fill : color}} />
   }
 ]
 
@@ -38,13 +39,14 @@ const Footer = () => {
 
   const theme = useTheme()
   const background = theme.palette.background.default;
+  const darkest = theme.palette.neutral.darkest;
 
   return (
     <Paper sx={{ position: 'fixed', bottom: -2, left: 0, margin:0, padding:0, right: 0, height:"3rem", background:background}} elevation={2}>
       <FlexBetween sx={{alignItems:"center"}}>
         {footerOptions.map((footer,i)=> (
-          <StyledIconButton>
-            {footer.icon}
+          <StyledIconButton key={i}>
+            {footer.icon(darkest)}
           </StyledIconButton>
         ))}
       </FlexBetween>

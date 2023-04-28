@@ -12,3 +12,12 @@ body,
   margin: 0;
   padding: 0;
 }
+
+
+.img {
+  background: linear-gradient(to bottom, #d1681e 0%, #e8e222 100%);
+  position: relative;
+  text-align: center;
+  padding: 3px;
+  box-sizing: border-box;
+}
