@@ -1,5 +1,6 @@
 import React from 'react'
 import {Box, useTheme} from "@mui/material";
+import Posts from '../widgets/Posts';
 
 const HomePage = () => {
 
@@ -8,7 +9,7 @@ const HomePage = () => {
 
   return (
     <Box color={dark}>
-        Homepage
+        <Posts />
     </Box>
   )
 }

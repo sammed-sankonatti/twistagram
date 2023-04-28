@@ -14,7 +14,8 @@ function App() {
   const theme = useMemo(()=> createTheme(themeSettings(mode)), [mode])
 
   return (
-    <Router>
+    <div className="app">
+      <Router>
       <ThemeProvider theme={theme}>
         <CssBaseline />
           <TopBar />
@@ -22,7 +23,8 @@ function App() {
             <Route path="/" element={<HomePage />} />
           </Routes>
         </ThemeProvider>
-    </Router> 
+      </Router> 
+    </div>
   )
 }
 
