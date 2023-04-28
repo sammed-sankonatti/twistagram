@@ -7,6 +7,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ThemeProvider, CssBaseline } from '@mui/material';
 import HomePage from './pages/HomePage';
 import TopBar from './widgets/TopBar';
+import Footer from './widgets/Footer';
+
 
 function App() {
 
@@ -22,6 +24,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
           </Routes>
+          <Footer />
         </ThemeProvider>
       </Router> 
     </div>
